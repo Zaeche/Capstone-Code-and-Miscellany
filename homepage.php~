@@ -1,0 +1,83 @@
+<?php
+session_start(); /// initialise session
+include("redChickens.php");
+check_logged();
+?>
+
+<?php
+if (isset($_POST["home"]))
+{	
+	header("Location: homepage.php");
+}
+?>
+
+<?php
+if (isset($_POST["about"]))
+{	
+	header("Location: about.php");
+}
+?>
+
+<?php
+if (isset($_POST["feedback"]))
+{	
+	header("Location: feedback.php");
+}
+?>
+
+<?php
+if (isset($_POST["logout"]))
+{	
+	header("Location: logout.php");
+}
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<link rel = "stylesheet" type ="text/css" href = "index.css" />
+	<title> Control Panel </title>
+</head>
+<fancyLogo><br /></fancyLogo>
+<body>
+<div id = "content">
+<div id = "main-top"><!-- Leave this empty --></div>
+<div id = "main-center">
+
+<div class ="info">
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<p> Welcome to the homepage for the Zebra Home Automation System! </p>
+<p> This page lists the options available to you, the user. </p>
+
+
+<form method=post><button name="home" value="home" class="IR"
+  id="IRbutton1"><em></em>Home</button>
+
+<form method=post><button name="feedback" value="feedback" class="IR"
+  id="IRbutton3"><em></em>Feedback</button>
+
+<form method=post><button name="about" value="about" class="IR"
+  id="IRbutton4"><em></em>About</button>
+
+<form method=post><button name="logout" value="logout" class="IR"
+  id="IRbutton2"><em></em>Logout</button>
+
+</div>
+</div>
+<div id ="main-bottom"><!--Leave this empty --></div>
+	
+	<div id = "footer">
+	<div class="copyright">
+	</div>
+	</div>
+</div>
+</body>
+</html>
+
